@@ -2,49 +2,35 @@ package za.ac.cput.mymavemproject.database;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.*;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-/**
- *
- * @author Engetelo
- */
 public class VehicleDAO {
 
-    private Connection con;
-
-    public void createTable() throws Exception {
-        String createTable = "CREATE TABLE Vehicles (Votes_count INTEGER, Car_names VARCHAR(50))";
-        Statement stmt = con.createStatement();
-        stmt.execute(createTable);
-        System.out.println("Table created successfully");
-
-    }
-
-    public void addValues(String name) {
-
-        String query = "INSERT INTO VEHICLES( Votes_count, Car_names) VALUES(?,?)";
-        try (Connection con = VehiclesDbConnection.derbyConnection(); PreparedStatement pst = con.prepareStatement(query)) {
-            pst.setString(1, name);
-            pst.executeUpdate();
-
+    // Create the table if not already existing
+    public void createTable() throws SQLException {
+        String createTable = "CREATE TABLE IF NOT EXISTS Vehicles (Votes_count INTEGER, Car_names VARCHAR(50))";
+        try (Connection con = VehiclesDbConnection.derbyConnection(); 
+             Statement stmt = con.createStatement()) {
+            stmt.execute(createTable);
+            System.out.println("Table created successfully");
         } catch (SQLException e) {
-            System.out.println("work please");
-            e.getMessage();
-            e.printStackTrace();
+            System.out.println("Table creation error: " + e.getMessage());
+            throw e;
         }
     }
 
-    public void updateVotes() {
+    // Insert values into the table
+    public void addValues(int votes, String name) throws SQLException {
+        String query = "INSERT INTO Vehicles (Votes_count, Car_names) VALUES (?, ?)";
+        try (Connection con = VehiclesDbConnection.derbyConnection(); 
+             PreparedStatement pst = con.prepareStatement(query)) {
+            pst.setInt(1, votes);
+            pst.setString(2, name);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Insertion error: " + e.getMessage());
+            throw e;
+        }
     }
-
-    public void retrieveValues() {
-
-    }
-
-    public void closeConnection() throws Exception {
-
-        con.close();
-
-    }
-
 }

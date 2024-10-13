@@ -15,13 +15,13 @@ public class RunFile {
         
         try {
            
-           
+
             
-            db.addValues("Car 1");
-            db.addValues("Car 1");
-            db.addValues("Car 1");
-            db.addValues("Car 1");
-            db.addValues("Car 1");
+            db.addValues(1,"Car 1");
+            db.addValues(2,"Car 1");
+            db.addValues(3,"Car 1");
+            db.addValues(4,"Car 1");
+            db.addValues(5,"Car 1");
             System.out.println("Hello");
             
           
