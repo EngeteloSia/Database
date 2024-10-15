@@ -1,23 +1,19 @@
-Sun Oct 13 17:49:47 SAST 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Tue Oct 15 10:24:12 SAST 2024 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Sun Oct 13 17:49:47 SAST 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-8692-4b7d-ffffe2892375 
-on database directory C:\Users\Franco\Documents\GitHub\Database\Database\DB\VEHICLES with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
-Loaded from file:/C:/Program%20Files/Java/jdk-20/Db/db-derby-10.14.2.0-bin/lib/derby.jar
+Tue Oct 15 10:24:12 SAST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-8f47-0f19-000002a4f24b 
+on database directory C:\Users\Engetelo\OneDrive - Cape Peninsula University of Technology\Documents\GitHub\Database\Database\DB\VEHICLES with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+Loaded from file:/C:/Program%20Files/Java/jdk-23/Db/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=17.0.11+7-LTS-207
-user.dir=C:\Program Files\Java\jdk-20\Db\db-derby-10.14.2.0-bin
-os.name=Windows 10
+java.runtime.version=17.0.6+9-LTS-190
+user.dir=C:\Program Files\Java\jdk-23\Db\db-derby-10.14.2.0-bin
+os.name=Windows 11
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Users\Franco\Documents\GitHub\Database\Database\DB
+derby.system.home=C:\Users\Engetelo\OneDrive - Cape Peninsula University of Technology\Documents\GitHub\Database\Database\DB
 Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Sun Oct 13 17:49:48 SAST 2024:
-Shutting down instance a816c00e-0192-8692-4b7d-ffffe2892375 on database directory C:\Users\Franco\Documents\GitHub\Database\Database\DB\VEHICLES with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
-Sun Oct 13 17:49:48 SAST 2024 Thread[DRDAConnThread_3,5,main] (DATABASE = VEHICLES), (DRDAID = {2}), Database 'VEHICLES' shutdown.
-Sun Oct 13 17:50:21 SAST 2024 Thread[DRDAConnThread_2,5,main] Cleanup action starting
-java.sql.SQLException: Database 'LibraryDatabse' not found.
+Tue Oct 15 10:24:15 SAST 2024 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+java.sql.SQLException: Database 'VEHICLE' not found.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
@@ -39,12 +35,12 @@ java.sql.SQLException: Database 'LibraryDatabse' not found.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: ERROR XJ004: Database 'LibraryDatabse' not found.
+Caused by: ERROR XJ004: Database 'VEHICLE' not found.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 21 more
 ============= begin nested exception, level (1) ===========
-ERROR XJ004: Database 'LibraryDatabse' not found.
+ERROR XJ004: Database 'VEHICLE' not found.
 	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
@@ -70,17 +66,59 @@ ERROR XJ004: Database 'LibraryDatabse' not found.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Sun Oct 13 17:50:21 SAST 2024 Thread[DRDAConnThread_2,5,main] (DATABASE = LibraryDatabse), (DRDAID = {3}), Database 'LibraryDatabse' not found.
-----------------------------------------------------------------
-Sun Oct 13 17:50:30 SAST 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 6ede40af-0192-8692-4b7d-ffffe2892375 
-on database directory C:\Users\Franco\Documents\GitHub\Database\Database\DB\VEHICLES with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
-Loaded from file:/C:/Program%20Files/Java/jdk-20/Db/db-derby-10.14.2.0-bin/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=17.0.11+7-LTS-207
-user.dir=C:\Program Files\Java\jdk-20\Db\db-derby-10.14.2.0-bin
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Users\Franco\Documents\GitHub\Database\Database\DB
-Database Class Loader started - derby.database.classpath=''
+Tue Oct 15 10:24:15 SAST 2024 Thread[DRDAConnThread_3,5,main] (DATABASE = VEHICLE), (DRDAID = {2}), Database 'VEHICLE' not found.
+Tue Oct 15 19:14:40 SAST 2024 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+java.sql.SQLException: Database 'VEHICLE' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ004: Database 'VEHICLE' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 21 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'VEHICLE' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Tue Oct 15 19:14:40 SAST 2024 Thread[DRDAConnThread_3,5,main] (DATABASE = VEHICLE), (DRDAID = {3}), Database 'VEHICLE' not found.

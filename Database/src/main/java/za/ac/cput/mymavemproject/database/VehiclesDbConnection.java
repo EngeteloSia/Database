@@ -1,4 +1,4 @@
-package za.ac.cput.mymavemproject.database;
+ package za.ac.cput.mymavemproject.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,8 +12,12 @@ public class VehiclesDbConnection {
         String password = "1234";
 
         System.out.println("About to get connection");
+         VehiclesDbConnection db = null;
         Connection con = DriverManager.getConnection(dbURL, username, password);
         System.out.println("Connection established");
         return con;
     }
+   
+    
+        
 }
